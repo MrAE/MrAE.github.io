@@ -12,8 +12,21 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    overflow: hidden;
+    height: 100%;
+    overflow: auto;
+}
+
+#paragraph {
+  display: none; /* Initially hidden */
+  transition: max-height 0.3s ease-out; /* Smooth transition */
+  overflow: hidden;
+  justify: left;
+  max-height: 0; /* Start with max-height 0 to hide the content */
+}
+
+#paragraph.expanded {
+  display: block;
+  max-height: 200px; /* Set a limit to the expanded height */
 }
 
 .container {
@@ -76,6 +89,12 @@ body {
     margin-bottom: 10px;
 }
 
+.emphasize {
+    margin-bottom: 10px;
+    justify-content: left;
+    text-align: left;
+}
+
 #status-text {
     font-weight: bold;
     color: #ff0099;
@@ -95,7 +114,7 @@ body {
     content: "";
     display: block;
     height: 100%;
-    width: 70%; /* Adjust this value to simulate a different status */
+    width: 90%; /* Adjust this value to simulate a different status */
     background: linear-gradient(45deg, #ff0099, #cc0066);
     box-shadow: 0 0 10px rgba(255, 0, 153, 0.8);
     animation: pulse 2s infinite;
