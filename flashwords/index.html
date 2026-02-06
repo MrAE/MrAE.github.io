@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FlashWords – Speed Reader</title>
+  <style>
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      background: #f5f7fa;
+      color: #222;
+      display: flex;
+      justify-content: center;
+      padding: 2rem;
+    }
+
+    .app {
+      max-width: 700px;
+      width: 100%;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      padding: 1.5rem 2rem 2rem;
+    }
+
+    h1 {
+      margin-top: 0;
+      text-align: center;
+    }
+
+    textarea {
+      width: 100%;
+      height: 120px;
+      resize: vertical;
+      padding: 0.75rem;
+      font-size: 1rem;
+    }
+
+    .controls {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .controls label {
+      font-size: 0.9rem;
+    }
+
+    input[type="range"],
+    input[type="number"] {
+      width: 100%;
+    }
+
+    .player {
+      margin-top: 2rem;
+      text-align: center;
+    }
+
+    .word-display {
+      font-size: 3rem;
+      font-weight: 600;
+      min-height: 4rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1.5rem;
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: center;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+    }
+
+    button {
+      font-size: 0.9rem;
+      padding: 0.5rem 0.75rem;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      background: #fafafa;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #eee;
+    }
+
+    footer {
+      margin-top: 1.5rem;
+      font-size: 0.75rem;
+      color: #666;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="app">
+    <h1>FlashWords</h1>
+
+    <p>Paste a list of words or plain text below. Words will be shown in chunks, one flash at a time.</p>
+
+    <textarea id="inputText" placeholder="cat dog elephant\n\nThe quick brown fox jumps over the lazy dog"></textarea>
+
+    <div class="controls">
+      <div>
+        <label for="speed">Speed (ms per flash)</label>
+        <input type="range" id="speed" min="200" max="2000" step="100" value="800">
+        <div><span id="speedValue">800</span> ms</div>
+      </div>
+
+      <div>
+        <label for="chunkSize">Chunk size (words at once)</label>
+        <input type="number" id="chunkSize" min="1" max="10" value="1">
+      </div>
+    </div>
+
+    <div class="player">
+      <div class="word-display" id="wordDisplay">Ready</div>
+
+      <div class="buttons">
+        <button id="backBtn">⏮ Back</button>
+        <button id="playPauseBtn">▶ Play</button>
+        <button id="forwardBtn">Forward ⏭</button>
+        <button id="resetBtn">⟲ Reset</button>
+      </div>
+    </div>
+
+    <footer>
+      Designed for early readers • Works great on GitHub Pages
+    </footer>
+  </div>
+
+  <script>
+    const inputText = document.getElementById('inputText');
+    const speedSlider = document.getElementById('speed');
+    const speedValue = document.getElementById('speedValue');
+    const chunkSizeInput = document.getElementById('chunkSize');
+    const wordDisplay = document.getElementById('wordDisplay');
+
+    const playPauseBtn = document.getElementById('playPauseBtn');
+    const backBtn = document.getElementById('backBtn');
+    const forwardBtn = document.getElementById('forwardBtn');
+    const resetBtn = document.getElementById('resetBtn');
+
+    let words = [];
+    let index = 0;
+    let timer = null;
+    let playing = false;
+
+    speedValue.textContent = speedSlider.value;
+
+    speedSlider.addEventListener('input', () => {
+      speedValue.textContent = speedSlider.value;
+      if (playing) restartTimer();
+    });
+
+    function parseWords() {
+      const text = inputText.value.trim();
+      words = text.split(/\s+/);
+    }
+
+    function showCurrent() {
+      if (words.length === 0) {
+        wordDisplay.textContent = '—';
+        return;
+      }
+      const chunk = parseInt(chunkSizeInput.value, 10);
+      const slice = words.slice(index, index + chunk);
+      wordDisplay.textContent = slice.join(' ');
+    }
+
+    function next() {
+      const chunk = parseInt(chunkSizeInput.value, 10);
+      index += chunk;
+      if (index >= words.length) {
+        pause();
+        index = words.length;
+      }
+      showCurrent();
+    }
+
+    function back() {
+      const chunk = parseInt(chunkSizeInput.value, 10);
+      index = Math.max(0, index - chunk);
+      showCurrent();
+    }
+
+    function play() {
+      if (playing) return;
+      parseWords();
+      index = Math.max(0, index);
+      if (words.length === 0) {
+        wordDisplay.textContent = '—';
+        return;
+      }
+      playing = true;
+      playPauseBtn.textContent = '⏸ Pause';
+      showCurrent();
+      clearInterval(timer);
+      timer = setInterval(next, parseInt(speedSlider.value, 10));
+    }
+
+    function pause() {
+      playing = false;
+      playPauseBtn.textContent = '▶ Play';
+      clearInterval(timer);
+      timer = null;
+    }
+
+    function restartTimer() {
+      clearInterval(timer);
+      timer = setInterval(next, parseInt(speedSlider.value, 10));
+    }
+
+    function reset() {
+      pause();
+      index = 0;
+      showCurrent();
+    }
+
+    playPauseBtn.addEventListener('click', () => {
+      playing ? pause() : play();
+    });
+
+    backBtn.addEventListener('click', back);
+    forwardBtn.addEventListener('click', next);
+    resetBtn.addEventListener('click', reset);
+  </script>
+</body>
+</html>
