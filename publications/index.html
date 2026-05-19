@@ -743,17 +743,6 @@ title: "Publications"
 </style>
 
 <script>
-// Parallax scrolling effect for topographical background
-window.addEventListener('scroll', () => {
-  const topoBackground = document.querySelector('.topo-background');
-  const scrollPercent = window.scrollY / (document.documentElement.scrollHeight - window.innerHeight);
-  
-  // Move the background based on scroll position
-  // This creates the effect of the contour lines moving as you scroll
-  const offset = scrollPercent * 200; // Adjust multiplier for speed
-  topoBackground.style.transform = `translateY(${offset}px)`;
-});
-
 // Animate page load
 document.addEventListener('DOMContentLoaded', () => {
   const cards = document.querySelectorAll('.publication-card');
