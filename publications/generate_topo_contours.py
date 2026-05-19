@@ -221,10 +221,10 @@ def main():
     )
     parser.add_argument('--seed', type=int, default=None,
                         help='Random seed for reproducibility (default: random)')
-    parser.add_argument('--width', type=int, default=1200,
-                        help='SVG width in pixels (default: 1200)')
-    parser.add_argument('--height', type=int, default=800,
-                        help='SVG height in pixels (default: 800)')
+    parser.add_argument('--width', type=int, default=1920,
+                        help='SVG width in pixels (default: 1920)')
+    parser.add_argument('--height', type=int, default=1080,
+                        help='SVG height in pixels (default: 1080)')
     parser.add_argument('--contours', type=int, default=20,
                         help='Number of contour lines (default: 20)')
     parser.add_argument('--octaves', type=int, default=4,
