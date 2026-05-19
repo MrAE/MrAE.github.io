@@ -1,0 +1,357 @@
+---
+layout: default
+title: "Publications"
+---
+
+<div class="publications-container">
+  <header class="publications-header">
+    <h1>Publications</h1>
+    <p class="subtitle">Research spanning machine learning, data science, and applied epidemiology</p>
+  </header>
+
+  <div class="publications-grid">
+    
+    <!-- SPORF Card -->
+    <article class="publication-card" data-year="2020">
+      <div class="card-content">
+        <div class="card-image-wrapper">
+          <img src="/publications/images/sporf-poster.png" 
+               alt="SPORF Poster" 
+               class="card-image"
+               onerror="this.src='/publications/images/in-progress.png'">
+        </div>
+        
+        <div class="card-text">
+          <h2 class="card-title">Sparse Projection Oblique Randomer Forests</h2>
+          
+          <div class="card-metadata">
+            <span class="card-year">2020</span>
+            <span class="card-venue">JMLR</span>
+          </div>
+          
+          <p class="card-summary">
+            Extended random forests with oblique splits and sparse projections, achieving competitive performance with deep networks while maintaining interpretability.
+          </p>
+          
+          <div class="card-contribution">
+            <strong>My Role:</strong> Co-maintained R and Python libraries (CRAN, PyPI), conducted experimental validation and generated publication figures.
+          </div>
+          
+          <div class="card-links">
+            <a href="/publications/sporf/" class="card-link read-more">Read More →</a>
+            <a href="https://github.com/neurodata/SPORF" target="_blank" class="card-link external-link" title="GitHub">
+              <span class="link-icon">⚙</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- MORF Card -->
+    <article class="publication-card" data-year="2023">
+      <div class="card-content">
+        <div class="card-image-wrapper">
+          <img src="/publications/images/morf-poster.png" 
+               alt="MORF Poster" 
+               class="card-image"
+               onerror="this.src='/publications/images/in-progress.png'">
+        </div>
+        
+        <div class="card-text">
+          <h2 class="card-title">Manifold Oblique Random Forests</h2>
+          
+          <div class="card-metadata">
+            <span class="card-year">2023</span>
+            <span class="card-venue">SIMODS</span>
+          </div>
+          
+          <p class="card-summary">
+            Incorporates manifold learning into oblique random forests, achieving CNN-competitive performance on image classification while preserving interpretability.
+          </p>
+          
+          <div class="card-contribution">
+            <strong>My Role:</strong> Implemented manifold learning in R package, designed experiments comparing against CNNs, and generated empirical validation figures.
+          </div>
+          
+          <div class="card-links">
+            <a href="/publications/morf/" class="card-link read-more">Read More →</a>
+            <a href="https://github.com/neurodata/morf" target="_blank" class="card-link external-link" title="GitHub">
+              <span class="link-icon">⚙</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- COVID-SDH Card -->
+    <article class="publication-card" data-year="2020">
+      <div class="card-content">
+        <div class="card-image-wrapper">
+          <img src="/publications/images/covid-sdh-poster.png" 
+               alt="COVID-19 Social Determinants Poster" 
+               class="card-image"
+               onerror="this.src='/publications/images/in-progress.png'">
+        </div>
+        
+        <div class="card-text">
+          <h2 class="card-title">Social Determinants of Health and COVID-19 Mortality</h2>
+          
+          <div class="card-metadata">
+            <span class="card-year">2020</span>
+            <span class="card-venue">Missouri Medicine</span>
+          </div>
+          
+          <p class="card-summary">
+            Investigates relationships between social determinants and county-level COVID-19 mortality, revealing significant disparities tied to socioeconomic factors and healthcare access.
+          </p>
+          
+          <div class="card-contribution">
+            <strong>My Role:</strong> Data cleaning and exploratory analysis, experimental validation, and creation of publication-quality visualizations.
+          </div>
+          
+          <div class="card-links">
+            <a href="/publications/covid-sdh/" class="card-link read-more">Read More →</a>
+          </div>
+        </div>
+      </div>
+    </article>
+
+  </div>
+</div>
+
+<style>
+:root {
+  --accent-teal: #00a8a8;
+  --accent-orange: #ff9d42;
+  --dark-bg: #1a1a1a;
+  --card-bg: #242424;
+  --text-primary: #e0e0e0;
+  --text-secondary: #b0b0b0;
+  --border-color: #404040;
+  --accent-light: #00d4d4;
+}
+
+.publications-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.publications-header {
+  text-align: center;
+  margin-bottom: 3rem;
+  border-bottom: 2px solid var(--accent-teal);
+  padding-bottom: 2rem;
+}
+
+.publications-header h1 {
+  font-size: 2.8rem;
+  margin: 0 0 0.5rem 0;
+  color: var(--text-primary);
+  font-family: 'Georgia', serif;
+  letter-spacing: -0.5px;
+}
+
+.subtitle {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  font-style: italic;
+  margin: 0;
+}
+
+.publications-grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: 1fr;
+}
+
+.publication-card {
+  background: var(--card-bg);
+  border-radius: 8px;
+  border-left: 4px solid var(--accent-teal);
+  overflow: hidden;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+
+.publication-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0,168,168,0.2);
+  border-left-color: var(--accent-orange);
+}
+
+.card-content {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 2rem;
+  padding: 2rem;
+  align-items: start;
+}
+
+.card-image-wrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4/3;
+  border-radius: 6px;
+  overflow: hidden;
+  background: linear-gradient(135deg, #2a2a2a 0%, #1a1a1a 100%);
+  border: 1px solid var(--border-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.publication-card:hover .card-image {
+  transform: scale(1.05);
+}
+
+.card-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.card-title {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin: 0;
+  color: var(--accent-light);
+  font-family: 'Georgia', serif;
+  line-height: 1.4;
+}
+
+.card-metadata {
+  display: flex;
+  gap: 1rem;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+.card-year {
+  font-weight: 600;
+  color: var(--accent-orange);
+}
+
+.card-summary {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.card-contribution {
+  background: rgba(0,168,168,0.1);
+  border-left: 3px solid var(--accent-teal);
+  padding: 1rem;
+  border-radius: 4px;
+  font-size: 0.95rem;
+  color: var(--text-primary);
+  line-height: 1.5;
+}
+
+.card-contribution strong {
+  color: var(--accent-teal);
+}
+
+.card-links {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  padding-top: 0.5rem;
+}
+
+.card-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+}
+
+.read-more {
+  background: var(--accent-teal);
+  color: #000;
+  flex: 1;
+  justify-content: center;
+}
+
+.read-more:hover {
+  background: var(--accent-orange);
+}
+
+.external-link {
+  background: transparent;
+  border: 1px solid var(--accent-orange);
+  color: var(--accent-orange);
+  padding: 0.5rem 0.75rem;
+  min-width: auto;
+}
+
+.external-link:hover {
+  background: var(--accent-orange);
+  color: #000;
+}
+
+.link-icon {
+  font-size: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .publications-header h1 {
+    font-size: 2rem;
+  }
+
+  .card-content {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .card-image-wrapper {
+    aspect-ratio: 16/9;
+  }
+
+  .card-title {
+    font-size: 1.2rem;
+  }
+}
+
+/* Dark mode is default, but can add light mode later if needed */
+</style>
+
+<script>
+// Add subtle animations on page load
+document.addEventListener('DOMContentLoaded', () => {
+  const cards = document.querySelectorAll('.publication-card');
+  cards.forEach((card, index) => {
+    card.style.opacity = '0';
+    card.style.animation = `fadeInUp 0.6s ease forwards`;
+    card.style.animationDelay = `${index * 0.15}s`;
+  });
+});
+</script>
+
+<style>
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+</style>
