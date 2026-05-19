@@ -4,179 +4,504 @@ title: "Publications"
 ---
 
 <div class="publications-container">
-  <header class="publications-header">
-    <h1>Publications</h1>
-    <p class="subtitle">Research spanning machine learning, data science, and applied epidemiology</p>
-  </header>
-
-  <div class="publications-grid">
-    
-    <!-- SPORF Card -->
-    <article class="publication-card" data-year="2020">
-      <div class="card-content">
-        <div class="card-image-wrapper">
-          <img src="/publications/images/sporf-poster.png" 
-               alt="SPORF Poster" 
-               class="card-image"
-               onerror="this.src='/publications/images/in-progress.png'">
-        </div>
-        
-        <div class="card-text">
-          <h2 class="card-title">Sparse Projection Oblique Randomer Forests</h2>
-          
-          <div class="card-metadata">
-            <span class="card-year">2020</span>
-            <span class="card-venue">JMLR</span>
-          </div>
-          
-          <p class="card-summary">
-            Extended random forests with oblique splits and sparse projections, achieving competitive performance with deep networks while maintaining interpretability.
-          </p>
-          
-          <div class="card-contribution">
-            <strong>My Role:</strong> Co-maintained R and Python libraries (CRAN, PyPI), conducted experimental validation and generated publication figures.
-          </div>
-          
-          <div class="card-links">
-            <a href="/publications/sporf/" class="card-link read-more">Read More →</a>
-            <a href="https://github.com/neurodata/SPORF" target="_blank" class="card-link external-link" title="GitHub">
-              <span class="link-icon">⚙</span>
-            </a>
-          </div>
-        </div>
-      </div>
-    </article>
-
-    <!-- MORF Card -->
-    <article class="publication-card" data-year="2023">
-      <div class="card-content">
-        <div class="card-image-wrapper">
-          <img src="/publications/images/morf-poster.png" 
-               alt="MORF Poster" 
-               class="card-image"
-               onerror="this.src='/publications/images/in-progress.png'">
-        </div>
-        
-        <div class="card-text">
-          <h2 class="card-title">Manifold Oblique Random Forests</h2>
-          
-          <div class="card-metadata">
-            <span class="card-year">2023</span>
-            <span class="card-venue">SIMODS</span>
-          </div>
-          
-          <p class="card-summary">
-            Incorporates manifold learning into oblique random forests, achieving CNN-competitive performance on image classification while preserving interpretability.
-          </p>
-          
-          <div class="card-contribution">
-            <strong>My Role:</strong> Implemented manifold learning in R package, designed experiments comparing against CNNs, and generated empirical validation figures.
-          </div>
-          
-          <div class="card-links">
-            <a href="/publications/morf/" class="card-link read-more">Read More →</a>
-            <a href="https://github.com/neurodata/morf" target="_blank" class="card-link external-link" title="GitHub">
-              <span class="link-icon">⚙</span>
-            </a>
-          </div>
-        </div>
-      </div>
-    </article>
-
-    <!-- COVID-SDH Card -->
-    <article class="publication-card" data-year="2020">
-      <div class="card-content">
-        <div class="card-image-wrapper">
-          <img src="/publications/images/covid-sdh-poster.png" 
-               alt="COVID-19 Social Determinants Poster" 
-               class="card-image"
-               onerror="this.src='/publications/images/in-progress.png'">
-        </div>
-        
-        <div class="card-text">
-          <h2 class="card-title">Social Determinants of Health and COVID-19 Mortality</h2>
-          
-          <div class="card-metadata">
-            <span class="card-year">2020</span>
-            <span class="card-venue">Missouri Medicine</span>
-          </div>
-          
-          <p class="card-summary">
-            Investigates relationships between social determinants and county-level COVID-19 mortality, revealing significant disparities tied to socioeconomic factors and healthcare access.
-          </p>
-          
-          <div class="card-contribution">
-            <strong>My Role:</strong> Data cleaning and exploratory analysis, experimental validation, and creation of publication-quality visualizations.
-          </div>
-          
-          <div class="card-links">
-            <a href="/publications/covid-sdh/" class="card-link read-more">Read More →</a>
-          </div>
-        </div>
-      </div>
-    </article>
-
+  
+  <!-- Animated topographical background -->
+  <div class="topo-background">
+    <object class="topo-svg" data="/publications/images/topo-bg.svg" type="image/svg+xml">
+      <!-- Fallback: solid dark background if SVG fails to load -->
+      <div style="background: var(--dark-bg); width: 100%; height: 100%;"></div>
+    </object>
+    <div class="topo-overlay"></div>
   </div>
+  
+  <!-- Top accent bar with geometric elements -->
+  <div class="accent-bar accent-bar-top">
+    <div class="accent-bar-content">
+      <div class="geometric-shape shape-top-left"></div>
+      <div class="accent-divider"></div>
+      <div class="geometric-shape shape-top-center"></div>
+      <div class="accent-divider"></div>
+      <div class="geometric-shape shape-top-right"></div>
+    </div>
+  </div>
+
+  <!-- Left side accent panel -->
+  <div class="accent-panel accent-panel-left">
+    <div class="panel-accent-line"></div>
+  </div>
+
+  <!-- Right side accent panel -->
+  <div class="accent-panel accent-panel-right">
+    <div class="panel-accent-line"></div>
+  </div>
+
+  <!-- Main content area -->
+  <div class="publications-main">
+    <header class="publications-header">
+      <div class="header-accent-top-left"></div>
+      <div class="header-accent-top-right"></div>
+      <h1>Publications</h1>
+      <p class="subtitle">Research spanning machine learning, data science, and applied epidemiology</p>
+      <div class="header-divider"></div>
+    </header>
+
+    <div class="publications-grid">
+      
+      <!-- SPORF Card -->
+      <article class="publication-card" data-year="2020">
+        <div class="card-content">
+          <div class="card-image-wrapper">
+            <div class="image-accent-frame"></div>
+            <img src="/publications/images/sporf-poster.png" 
+                 alt="SPORF Poster" 
+                 class="card-image"
+                 onerror="this.src='/publications/images/in-progress.png'">
+          </div>
+          
+          <div class="card-text">
+            <div class="card-header-accent"></div>
+            <h2 class="card-title">Sparse Projection Oblique Randomer Forests</h2>
+            
+            <div class="card-metadata">
+              <span class="card-year">2020</span>
+              <span class="card-separator">▪</span>
+              <span class="card-venue">JMLR</span>
+            </div>
+            
+            <p class="card-summary">
+              Extended random forests with oblique splits and sparse projections, achieving competitive performance with deep networks while maintaining interpretability.
+            </p>
+            
+            <div class="card-contribution">
+              <div class="contribution-accent-left"></div>
+              <div class="contribution-content">
+                <strong>My Role:</strong> Co-maintained R and Python libraries (CRAN, PyPI), conducted experimental validation and generated publication figures.
+              </div>
+            </div>
+            
+            <div class="card-links">
+              <a href="/publications/sporf/" class="card-link read-more">Read More →</a>
+              <a href="https://github.com/neurodata/SPORF" target="_blank" class="card-link external-link" title="GitHub">
+                <span class="link-icon">⚙</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Middle accent divider -->
+      <div class="section-divider">
+        <div class="divider-line"></div>
+        <div class="divider-accent-left"></div>
+        <div class="divider-accent-center"></div>
+        <div class="divider-accent-right"></div>
+        <div class="divider-line"></div>
+      </div>
+
+      <!-- MORF Card -->
+      <article class="publication-card" data-year="2023">
+        <div class="card-content">
+          <div class="card-image-wrapper">
+            <div class="image-accent-frame"></div>
+            <img src="/publications/images/morf-poster.png" 
+                 alt="MORF Poster" 
+                 class="card-image"
+                 onerror="this.src='/publications/images/in-progress.png'">
+          </div>
+          
+          <div class="card-text">
+            <div class="card-header-accent"></div>
+            <h2 class="card-title">Manifold Oblique Random Forests</h2>
+            
+            <div class="card-metadata">
+              <span class="card-year">2023</span>
+              <span class="card-separator">▪</span>
+              <span class="card-venue">SIMODS</span>
+            </div>
+            
+            <p class="card-summary">
+              Incorporates manifold learning into oblique random forests, achieving CNN-competitive performance on image classification while preserving interpretability.
+            </p>
+            
+            <div class="card-contribution">
+              <div class="contribution-accent-left"></div>
+              <div class="contribution-content">
+                <strong>My Role:</strong> Implemented manifold learning in R package, designed experiments comparing against CNNs, and generated empirical validation figures.
+              </div>
+            </div>
+            
+            <div class="card-links">
+              <a href="/publications/morf/" class="card-link read-more">Read More →</a>
+              <a href="https://github.com/neurodata/morf" target="_blank" class="card-link external-link" title="GitHub">
+                <span class="link-icon">⚙</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Middle accent divider -->
+      <div class="section-divider">
+        <div class="divider-line"></div>
+        <div class="divider-accent-left"></div>
+        <div class="divider-accent-center"></div>
+        <div class="divider-accent-right"></div>
+        <div class="divider-line"></div>
+      </div>
+
+      <!-- COVID-SDH Card -->
+      <article class="publication-card" data-year="2020">
+        <div class="card-content">
+          <div class="card-image-wrapper">
+            <div class="image-accent-frame"></div>
+            <img src="/publications/images/covid-sdh-poster.png" 
+                 alt="COVID-19 Social Determinants Poster" 
+                 class="card-image"
+                 onerror="this.src='/publications/images/in-progress.png'">
+          </div>
+          
+          <div class="card-text">
+            <div class="card-header-accent"></div>
+            <h2 class="card-title">Social Determinants of Health and COVID-19 Mortality</h2>
+            
+            <div class="card-metadata">
+              <span class="card-year">2020</span>
+              <span class="card-separator">▪</span>
+              <span class="card-venue">Missouri Medicine</span>
+            </div>
+            
+            <p class="card-summary">
+              Investigates relationships between social determinants and county-level COVID-19 mortality, revealing significant disparities tied to socioeconomic factors and healthcare access.
+            </p>
+            
+            <div class="card-contribution">
+              <div class="contribution-accent-left"></div>
+              <div class="contribution-content">
+                <strong>My Role:</strong> Data cleaning and exploratory analysis, experimental validation, and creation of publication-quality visualizations.
+              </div>
+            </div>
+            
+            <div class="card-links">
+              <a href="/publications/covid-sdh/" class="card-link read-more">Read More →</a>
+            </div>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+
+  <!-- Bottom accent bar with geometric elements -->
+  <div class="accent-bar accent-bar-bottom">
+    <div class="accent-bar-content">
+      <div class="geometric-shape shape-bottom-left"></div>
+      <div class="accent-divider"></div>
+      <div class="geometric-shape shape-bottom-center"></div>
+      <div class="accent-divider"></div>
+      <div class="geometric-shape shape-bottom-right"></div>
+    </div>
+  </div>
+
 </div>
 
 <style>
 :root {
   --accent-teal: #00a8a8;
   --accent-orange: #ff9d42;
+  --accent-light: #00d4d4;
   --dark-bg: #1a1a1a;
   --card-bg: #242424;
   --text-primary: #e0e0e0;
   --text-secondary: #b0b0b0;
   --border-color: #404040;
-  --accent-light: #00d4d4;
+  --accent-subtle: rgba(0, 168, 168, 0.15);
+}
+
+* {
+  box-sizing: border-box;
 }
 
 .publications-container {
+  position: relative;
+  background: var(--dark-bg);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* ===== TOPOGRAPHICAL BACKGROUND ===== */
+.topo-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.topo-svg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.topo-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(ellipse at center, transparent 0%, rgba(26,26,26,0.8) 100%);
+  pointer-events: none;
+}
+
+/* ===== TOP ACCENT BAR ===== */
+.accent-bar {
+  position: relative;
+  height: 60px;
+  background: linear-gradient(180deg, rgba(0,168,168,0.1) 0%, transparent 100%);
+  border-bottom: 2px solid var(--accent-teal);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+
+.accent-bar-top {
+  border-bottom: 3px double var(--accent-teal);
+}
+
+.accent-bar-bottom {
+  border-top: 3px double var(--accent-orange);
+  margin-top: 4rem;
+}
+
+.accent-bar-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 2rem;
+}
+
+.accent-divider {
+  width: 40px;
+  height: 3px;
+  background: linear-gradient(90deg, var(--accent-teal), var(--accent-orange));
+}
+
+.geometric-shape {
+  width: 30px;
+  height: 30px;
+  border: 2px solid;
+}
+
+.shape-top-left, .shape-top-center, .shape-top-right,
+.shape-bottom-left, .shape-bottom-center, .shape-bottom-right {
+  border-color: var(--accent-teal);
+}
+
+.shape-top-center, .shape-bottom-center {
+  border-radius: 50%;
+  background: rgba(0, 168, 168, 0.1);
+}
+
+.shape-top-left, .shape-bottom-left {
+  clip-path: polygon(0 0, 100% 0, 0 100%);
+}
+
+.shape-top-right, .shape-bottom-right {
+  clip-path: polygon(100% 0, 100% 100%, 0 0);
+}
+
+/* ===== SIDE PANELS ===== */
+.accent-panel {
+  position: fixed;
+  top: 80px;
+  width: 20px;
+  height: calc(100vh - 160px);
+  background: linear-gradient(90deg, 
+    rgba(0,168,168,0.05), 
+    transparent);
+  border: 1px solid rgba(0,168,168,0.2);
+  z-index: 5;
+}
+
+.accent-panel-left {
+  left: 0;
+}
+
+.accent-panel-right {
+  right: 0;
+  background: linear-gradient(-90deg, 
+    rgba(255,157,66,0.05), 
+    transparent);
+  border-color: rgba(255,157,66,0.2);
+}
+
+.panel-accent-line {
+  width: 100%;
+  height: 100%;
+  background: repeating-linear-gradient(
+    180deg,
+    transparent,
+    transparent 30px,
+    rgba(0,168,168,0.3) 30px,
+    rgba(0,168,168,0.3) 32px
+  );
+}
+
+.accent-panel-right .panel-accent-line {
+  background: repeating-linear-gradient(
+    180deg,
+    transparent,
+    transparent 30px,
+    rgba(255,157,66,0.3) 30px,
+    rgba(255,157,66,0.3) 32px
+  );
+}
+
+/* ===== MAIN CONTENT ===== */
+.publications-main {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 2rem 1rem;
+  padding: 3rem 2rem;
+  position: relative;
+  z-index: 8;
 }
 
 .publications-header {
+  position: relative;
   text-align: center;
   margin-bottom: 3rem;
-  border-bottom: 2px solid var(--accent-teal);
-  padding-bottom: 2rem;
+  padding: 2rem 2rem 3rem;
+  background: rgba(0,168,168,0.05);
+  border: 2px solid rgba(0,168,168,0.3);
+  border-radius: 8px;
+}
+
+.header-accent-top-left,
+.header-accent-top-right {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  border: 3px solid var(--accent-teal);
+  z-index: 0;
+}
+
+.header-accent-top-left {
+  top: -10px;
+  left: -10px;
+  border-right: none;
+  border-bottom: none;
+  border-radius: 0 0 8px 0;
+}
+
+.header-accent-top-right {
+  top: -10px;
+  right: -10px;
+  border-left: none;
+  border-bottom: none;
+  border-radius: 0 0 0 8px;
 }
 
 .publications-header h1 {
+  position: relative;
+  z-index: 1;
   font-size: 2.8rem;
   margin: 0 0 0.5rem 0;
-  color: var(--text-primary);
+  color: var(--accent-light);
   font-family: 'Georgia', serif;
   letter-spacing: -0.5px;
+  text-transform: uppercase;
+  font-weight: 700;
 }
 
 .subtitle {
+  position: relative;
+  z-index: 1;
   font-size: 1.1rem;
   color: var(--text-secondary);
   font-style: italic;
-  margin: 0;
+  margin: 0.5rem 0 1rem;
 }
 
+.header-divider {
+  position: relative;
+  z-index: 1;
+  width: 100px;
+  height: 3px;
+  background: linear-gradient(90deg, var(--accent-teal), var(--accent-orange));
+  margin: 1.5rem auto 0;
+  border-radius: 2px;
+}
+
+/* ===== PUBLICATIONS GRID ===== */
 .publications-grid {
   display: grid;
-  gap: 2rem;
+  gap: 0;
   grid-template-columns: 1fr;
 }
 
+/* ===== SECTION DIVIDER ===== */
+.section-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  margin: 3rem 0;
+  padding: 2rem 0;
+  position: relative;
+  z-index: 8;
+}
+
+.divider-line {
+  flex: 1;
+  height: 2px;
+  background: linear-gradient(90deg, 
+    transparent, 
+    var(--accent-teal) 20%, 
+    var(--accent-teal) 80%, 
+    transparent);
+}
+
+.divider-accent-left,
+.divider-accent-center,
+.divider-accent-right {
+  width: 25px;
+  height: 25px;
+  border: 2px solid;
+}
+
+.divider-accent-left, .divider-accent-right {
+  border-color: var(--accent-teal);
+  clip-path: polygon(0 0, 100% 50%, 0 100%);
+}
+
+.divider-accent-center {
+  border-color: var(--accent-orange);
+  border-radius: 50%;
+  background: rgba(255,157,66,0.1);
+}
+
+/* ===== PUBLICATION CARD ===== */
 .publication-card {
+  position: relative;
   background: var(--card-bg);
   border-radius: 8px;
   border-left: 4px solid var(--accent-teal);
   overflow: hidden;
   transition: all 0.3s ease;
   box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+  margin-bottom: 2rem;
+  z-index: 8;
 }
 
 .publication-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 16px rgba(0,168,168,0.2);
+  transform: translateY(-6px);
+  box-shadow: 0 12px 24px rgba(0,168,168,0.25);
   border-left-color: var(--accent-orange);
 }
 
@@ -188,6 +513,7 @@ title: "Publications"
   align-items: start;
 }
 
+/* ===== CARD IMAGE ===== */
 .card-image-wrapper {
   position: relative;
   width: 100%;
@@ -199,6 +525,20 @@ title: "Publications"
   display: flex;
   align-items: center;
   justify-content: center;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+}
+
+.image-accent-frame {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: 2px solid;
+  border-image: linear-gradient(135deg, var(--accent-teal), var(--accent-orange)) 1;
+  pointer-events: none;
+  z-index: 2;
+  border-radius: 4px;
 }
 
 .card-image {
@@ -209,14 +549,23 @@ title: "Publications"
 }
 
 .publication-card:hover .card-image {
-  transform: scale(1.05);
+  transform: scale(1.08);
 }
 
+/* ===== CARD TEXT ===== */
 .card-text {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   gap: 1rem;
+}
+
+.card-header-accent {
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, var(--accent-teal), var(--accent-orange));
+  border-radius: 2px;
+  margin-bottom: 0.5rem;
 }
 
 .card-title {
@@ -230,14 +579,20 @@ title: "Publications"
 
 .card-metadata {
   display: flex;
-  gap: 1rem;
+  gap: 0.75rem;
   font-size: 0.9rem;
   color: var(--text-secondary);
 }
 
 .card-year {
-  font-weight: 600;
+  font-weight: 700;
   color: var(--accent-orange);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.card-separator {
+  color: var(--accent-teal);
 }
 
 .card-summary {
@@ -247,20 +602,38 @@ title: "Publications"
   margin: 0;
 }
 
+/* ===== CARD CONTRIBUTION ===== */
 .card-contribution {
-  background: rgba(0,168,168,0.1);
-  border-left: 3px solid var(--accent-teal);
-  padding: 1rem;
-  border-radius: 4px;
+  position: relative;
+  background: rgba(0,168,168,0.08);
+  border: 1px solid rgba(0,168,168,0.3);
+  border-radius: 6px;
+  padding: 1rem 1rem 1rem 0;
   font-size: 0.95rem;
   color: var(--text-primary);
   line-height: 1.5;
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.contribution-accent-left {
+  flex-shrink: 0;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(180deg, var(--accent-teal), var(--accent-orange));
+  border-radius: 2px;
+}
+
+.contribution-content {
+  flex: 1;
 }
 
 .card-contribution strong {
   color: var(--accent-teal);
 }
 
+/* ===== CARD LINKS ===== */
 .card-links {
   display: flex;
   gap: 1rem;
@@ -272,28 +645,33 @@ title: "Publications"
   display: inline-flex;
   align-items: center;
   gap: 0.3rem;
-  padding: 0.5rem 1rem;
+  padding: 0.6rem 1.2rem;
   border-radius: 4px;
   text-decoration: none;
-  font-weight: 500;
+  font-weight: 600;
   font-size: 0.95rem;
   transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
 .read-more {
   background: var(--accent-teal);
-  color: #000;
+  color: var(--dark-bg);
   flex: 1;
   justify-content: center;
+  box-shadow: 0 4px 0 rgba(0,168,168,0.3);
 }
 
 .read-more:hover {
   background: var(--accent-orange);
+  box-shadow: 0 6px 0 rgba(255,157,66,0.3);
+  transform: translateY(-2px);
 }
 
 .external-link {
   background: transparent;
-  border: 1px solid var(--accent-orange);
+  border: 2px solid var(--accent-orange);
   color: var(--accent-orange);
   padding: 0.5rem 0.75rem;
   min-width: auto;
@@ -301,15 +679,20 @@ title: "Publications"
 
 .external-link:hover {
   background: var(--accent-orange);
-  color: #000;
+  color: var(--dark-bg);
+  border-color: var(--accent-orange);
 }
 
 .link-icon {
-  font-size: 1rem;
+  font-size: 1.1rem;
 }
 
-/* Responsive Design */
+/* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
+  .accent-panel {
+    display: none;
+  }
+
   .publications-header h1 {
     font-size: 2rem;
   }
@@ -326,24 +709,24 @@ title: "Publications"
   .card-title {
     font-size: 1.2rem;
   }
+
+  .accent-bar-content {
+    gap: 1rem;
+  }
+
+  .geometric-shape {
+    width: 24px;
+    height: 24px;
+  }
+
+  .section-divider {
+    gap: 1rem;
+    margin: 2rem 0;
+    padding: 1.5rem 0;
+  }
 }
 
-/* Dark mode is default, but can add light mode later if needed */
-</style>
-
-<script>
-// Add subtle animations on page load
-document.addEventListener('DOMContentLoaded', () => {
-  const cards = document.querySelectorAll('.publication-card');
-  cards.forEach((card, index) => {
-    card.style.opacity = '0';
-    card.style.animation = `fadeInUp 0.6s ease forwards`;
-    card.style.animationDelay = `${index * 0.15}s`;
-  });
-});
-</script>
-
-<style>
+/* ===== PAGE LOAD ANIMATION ===== */
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -354,4 +737,33 @@ document.addEventListener('DOMContentLoaded', () => {
     transform: translateY(0);
   }
 }
+
+.publication-card {
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+.publication-card:nth-child(1) { animation-delay: 0.15s; }
+.publication-card:nth-child(3) { animation-delay: 0.3s; }
+.publication-card:nth-child(5) { animation-delay: 0.45s; }
 </style>
+
+<script>
+// Parallax scrolling effect for topographical background
+window.addEventListener('scroll', () => {
+  const topoBackground = document.querySelector('.topo-background');
+  const scrollPercent = window.scrollY / (document.documentElement.scrollHeight - window.innerHeight);
+  
+  // Move the background based on scroll position
+  // This creates the effect of the contour lines moving as you scroll
+  const offset = scrollPercent * 200; // Adjust multiplier for speed
+  topoBackground.style.transform = `translateY(${offset}px)`;
+});
+
+// Animate page load
+document.addEventListener('DOMContentLoaded', () => {
+  const cards = document.querySelectorAll('.publication-card');
+  cards.forEach((card) => {
+    card.style.opacity = '0';
+  });
+});
+</script>
